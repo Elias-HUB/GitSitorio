@@ -47,5 +47,56 @@ namespace WindowsFormsApp1
 				return;
 			}
 		}
-	}
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MAceptar(object sender, EventArgs e)
+        {
+            if (TexApellido.BackColor == Color.Red)
+                {
+                    TexApellido.BackColor = System.Drawing.SystemColors.Control;
+                }
+            if (TexDireccion.BackColor == Color.Red)
+                {
+                    TexDireccion.BackColor = System.Drawing.SystemColors.Control;
+                }
+            if (TexEdad.BackColor == Color.Red)
+                {
+                    TexEdad.BackColor = System.Drawing.SystemColors.Control;
+                }
+            if (TexNombre.BackColor == Color.Red)
+                {
+                    TexNombre.BackColor = System.Drawing.SystemColors.Control;
+                }
+            if (TexApellido.Text == "")
+                {
+                    TexApellido.BackColor = Color.Red;
+                }
+            if (TexDireccion.Text == "")
+                {
+                    TexDireccion.BackColor = Color.Red;
+                }
+            if (TexEdad.Text == "")
+                {
+                    TexEdad.BackColor = Color.Red;
+                }
+            if (TexNombre.Text == "")
+                {
+                    TexNombre.BackColor = Color.Red;
+                }
+            if (TexApellido.Text != "" && TexApellido.BackColor != Color.Red &&
+                TexDireccion.Text != "" && TexDireccion.BackColor != Color.Red &&
+                TexEdad.Text != "" && TexEdad.BackColor != Color.Red &&
+                TexNombre.Text != "" && TexNombre.BackColor != Color.Red
+               )
+            {
+                TexResultado.Text = ("Apellido y Nombre: " + TexApellido.Text + " " + TexNombre.Text + "\r\n" +
+                                "Edad: " + TexEdad.Text + "\r\n" +
+                                "Dirección: " + TexDireccion.Text);
+            }
+        }
+    }
 }
