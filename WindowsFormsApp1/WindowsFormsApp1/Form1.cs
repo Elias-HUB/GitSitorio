@@ -55,6 +55,10 @@ namespace WindowsFormsApp1
 
         private void MAceptar(object sender, EventArgs e)
         {
+            TexApellido.Text = TexApellido.Text.ToString().ToUpper();
+            TexDireccion.Text = TexDireccion.Text.ToString().ToUpper();
+            TexEdad.Text = TexEdad.Text.ToString().ToUpper();
+            TexNombre.Text = TexNombre.Text.ToString().ToUpper();
             if (TexApellido.BackColor == Color.Red)
                 {
                     TexApellido.BackColor = System.Drawing.SystemColors.Control;
@@ -96,6 +100,49 @@ namespace WindowsFormsApp1
                 TexResultado.Text = ("Apellido y Nombre: " + TexApellido.Text + " " + TexNombre.Text + "\r\n" +
                                 "Edad: " + TexEdad.Text + "\r\n" +
                                 "Dirección: " + TexDireccion.Text);
+                TexResultado.Text = TexResultado.Text.ToString().ToUpper();
+            }
+        }
+        private void Mcancelar(object sender, EventArgs e)
+        {
+            //Application.Exit ();
+            this.Close();
+        }
+
+        private void PonerBlanco(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PonerBlancoA(object sender, EventArgs e)
+        {
+            if (TexApellido.BackColor == Color.Red)
+            {
+                TexApellido.BackColor = System.Drawing.SystemColors.Control;
+            }
+        }
+
+        private void PonerBlancoN(object sender, EventArgs e)
+        {
+            if (TexNombre.BackColor == Color.Red)
+            {
+                TexNombre.BackColor = System.Drawing.SystemColors.Control;
+            }
+        }
+
+        private void PonerBlancoE(object sender, EventArgs e)
+        {
+            if (TexEdad.BackColor == Color.Red)
+            {
+                TexEdad.BackColor = System.Drawing.SystemColors.Control;
+            }
+        }
+
+        private void PonerBlancoD(object sender, EventArgs e)
+        {
+            if (TexDireccion.BackColor == Color.Red)
+            {
+                TexDireccion.BackColor = System.Drawing.SystemColors.Control;
             }
         }
     }

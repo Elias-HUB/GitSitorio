@@ -111,6 +111,7 @@
             this.TexApellido.Name = "TexApellido";
             this.TexApellido.Size = new System.Drawing.Size(265, 22);
             this.TexApellido.TabIndex = 5;
+            this.TexApellido.Click += new System.EventHandler(this.PonerBlancoA);
             this.TexApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValLetras);
             // 
             // TexNombre
@@ -120,6 +121,7 @@
             this.TexNombre.Name = "TexNombre";
             this.TexNombre.Size = new System.Drawing.Size(265, 22);
             this.TexNombre.TabIndex = 6;
+            this.TexNombre.Click += new System.EventHandler(this.PonerBlancoN);
             this.TexNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValLetras);
             // 
             // TexEdad
@@ -129,19 +131,22 @@
             this.TexEdad.Name = "TexEdad";
             this.TexEdad.Size = new System.Drawing.Size(44, 22);
             this.TexEdad.TabIndex = 7;
+            this.TexEdad.Click += new System.EventHandler(this.PonerBlancoE);
             this.TexEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValNumeros);
             // 
             // TexDireccion
             // 
             this.TexDireccion.Location = new System.Drawing.Point(103, 87);
-            this.TexDireccion.MaxLength = 60;
+            this.TexDireccion.MaxLength = 20;
             this.TexDireccion.Name = "TexDireccion";
             this.TexDireccion.Size = new System.Drawing.Size(265, 22);
             this.TexDireccion.TabIndex = 8;
+            this.TexDireccion.Click += new System.EventHandler(this.PonerBlancoD);
             this.TexDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValLetNum);
             // 
             // TexResultado
             // 
+            this.TexResultado.Enabled = false;
             this.TexResultado.Location = new System.Drawing.Point(13, 150);
             this.TexResultado.MaxLength = 250;
             this.TexResultado.Multiline = true;
@@ -158,6 +163,7 @@
             this.MenuCancelar.TabIndex = 11;
             this.MenuCancelar.Text = "Cancelar";
             this.MenuCancelar.UseVisualStyleBackColor = true;
+            this.MenuCancelar.Click += new System.EventHandler(this.Mcancelar);
             // 
             // MenuAceptar
             // 
@@ -200,7 +206,7 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
+        }
 
 		#endregion
 
