@@ -1,6 +1,6 @@
 ﻿namespace PRACTICA_9__IMAGELIST_LISTVIEW_
 {
-    partial class Form1
+    partial class Menu1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,127 +29,163 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu1));
+            this.GBox1 = new System.Windows.Forms.GroupBox();
+            this.RBtnTitulo = new System.Windows.Forms.RadioButton();
+            this.RBtnDetalle = new System.Windows.Forms.RadioButton();
+            this.RBtnLista = new System.Windows.Forms.RadioButton();
+            this.RBtnSmall = new System.Windows.Forms.RadioButton();
+            this.RBtnLargel = new System.Windows.Forms.RadioButton();
+            this.BtnAtras = new System.Windows.Forms.Button();
+            this.LbDicAct = new System.Windows.Forms.Label();
+            this.LisVMenu = new System.Windows.Forms.ListView();
+            this.ImageListLarge = new System.Windows.Forms.ImageList(this.components);
+            this.ImageListSmall = new System.Windows.Forms.ImageList(this.components);
+            this.GBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // GBox1
             // 
-            this.listView1.Location = new System.Drawing.Point(12, 30);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(384, 294);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.GBox1.Controls.Add(this.RBtnTitulo);
+            this.GBox1.Controls.Add(this.RBtnDetalle);
+            this.GBox1.Controls.Add(this.RBtnLista);
+            this.GBox1.Controls.Add(this.RBtnSmall);
+            this.GBox1.Controls.Add(this.RBtnLargel);
+            this.GBox1.Location = new System.Drawing.Point(545, 30);
+            this.GBox1.Name = "GBox1";
+            this.GBox1.Size = new System.Drawing.Size(200, 263);
+            this.GBox1.TabIndex = 1;
+            this.GBox1.TabStop = false;
+            this.GBox1.Text = "Modo de vista";
             // 
-            // imageList1
+            // RBtnTitulo
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.RBtnTitulo.Location = new System.Drawing.Point(61, 180);
+            this.RBtnTitulo.Name = "RBtnTitulo";
+            this.RBtnTitulo.Size = new System.Drawing.Size(85, 17);
+            this.RBtnTitulo.TabIndex = 4;
+            this.RBtnTitulo.Text = "Titulo";
+            this.RBtnTitulo.UseVisualStyleBackColor = true;
+            this.RBtnTitulo.CheckedChanged += new System.EventHandler(this.CheckedChaTitulo);
             // 
-            // imageList2
+            // RBtnDetalle
             // 
-            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.RBtnDetalle.Checked = true;
+            this.RBtnDetalle.Location = new System.Drawing.Point(61, 140);
+            this.RBtnDetalle.Name = "RBtnDetalle";
+            this.RBtnDetalle.Size = new System.Drawing.Size(85, 17);
+            this.RBtnDetalle.TabIndex = 3;
+            this.RBtnDetalle.TabStop = true;
+            this.RBtnDetalle.Text = "Detalle";
+            this.RBtnDetalle.UseVisualStyleBackColor = true;
+            this.RBtnDetalle.CheckedChanged += new System.EventHandler(this.CheckedChaDetalle);
             // 
-            // groupBox1
+            // RBtnLista
             // 
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(545, 30);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 294);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.RBtnLista.Location = new System.Drawing.Point(61, 100);
+            this.RBtnLista.Name = "RBtnLista";
+            this.RBtnLista.Size = new System.Drawing.Size(85, 17);
+            this.RBtnLista.TabIndex = 2;
+            this.RBtnLista.Text = "Lista";
+            this.RBtnLista.UseVisualStyleBackColor = true;
+            this.RBtnLista.CheckedChanged += new System.EventHandler(this.CheckedChaLista);
             // 
-            // radioButton1
+            // RBtnSmall
             // 
-            this.radioButton1.Location = new System.Drawing.Point(61, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(104, 24);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RBtnSmall.Location = new System.Drawing.Point(61, 60);
+            this.RBtnSmall.Name = "RBtnSmall";
+            this.RBtnSmall.Size = new System.Drawing.Size(85, 17);
+            this.RBtnSmall.TabIndex = 1;
+            this.RBtnSmall.Text = "Small con";
+            this.RBtnSmall.UseVisualStyleBackColor = true;
+            this.RBtnSmall.CheckedChanged += new System.EventHandler(this.CheckedChaSmall);
             // 
-            // radioButton2
+            // RBtnLargel
             // 
-            this.radioButton2.Location = new System.Drawing.Point(61, 56);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RBtnLargel.Location = new System.Drawing.Point(61, 20);
+            this.RBtnLargel.Name = "RBtnLargel";
+            this.RBtnLargel.Size = new System.Drawing.Size(104, 24);
+            this.RBtnLargel.TabIndex = 0;
+            this.RBtnLargel.Text = "Large con";
+            this.RBtnLargel.UseVisualStyleBackColor = true;
+            this.RBtnLargel.CheckedChanged += new System.EventHandler(this.CheckedChaLarge);
             // 
-            // radioButton3
+            // BtnAtras
             // 
-            this.radioButton3.Location = new System.Drawing.Point(61, 95);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.BtnAtras.Location = new System.Drawing.Point(218, 310);
+            this.BtnAtras.Name = "BtnAtras";
+            this.BtnAtras.Size = new System.Drawing.Size(75, 23);
+            this.BtnAtras.TabIndex = 3;
+            this.BtnAtras.Text = "Atras";
+            this.BtnAtras.UseVisualStyleBackColor = true;
+            this.BtnAtras.Click += new System.EventHandler(this.BtnAtrasClick);
             // 
-            // radioButton4
+            // LbDicAct
             // 
-            this.radioButton4.Location = new System.Drawing.Point(61, 138);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.LbDicAct.Enabled = false;
+            this.LbDicAct.Location = new System.Drawing.Point(12, 9);
+            this.LbDicAct.Name = "LbDicAct";
+            this.LbDicAct.Size = new System.Drawing.Size(501, 18);
+            this.LbDicAct.TabIndex = 4;
+            this.LbDicAct.UseMnemonic = false;
             // 
-            // radioButton5
+            // LisVMenu
             // 
-            this.radioButton5.Location = new System.Drawing.Point(61, 188);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(85, 17);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "radioButton5";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.LisVMenu.LargeImageList = this.ImageListLarge;
+            this.LisVMenu.Location = new System.Drawing.Point(12, 30);
+            this.LisVMenu.Name = "LisVMenu";
+            this.LisVMenu.Size = new System.Drawing.Size(501, 263);
+            this.LisVMenu.SmallImageList = this.ImageListSmall;
+            this.LisVMenu.TabIndex = 5;
+            this.LisVMenu.UseCompatibleStateImageBehavior = false;
+            this.LisVMenu.View = System.Windows.Forms.View.Details;
+            this.LisVMenu.ItemActivate += new System.EventHandler(this.LisVMenu_ItemActivate);
+            this.LisVMenu.SelectedIndexChanged += new System.EventHandler(this.LisVMenu_SelectedIndexChanged);
             // 
-            // Form1
+            // ImageListLarge
+            // 
+            this.ImageListLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageListLarge.ImageStream")));
+            this.ImageListLarge.TransparentColor = System.Drawing.Color.Black;
+            this.ImageListLarge.Images.SetKeyName(0, "_0013_Ember.png");
+            this.ImageListLarge.Images.SetKeyName(1, "_0006_Cargo.png");
+            this.ImageListLarge.Images.SetKeyName(2, "_0018_Playstation.png");
+            this.ImageListLarge.Images.SetKeyName(3, "_0019_Steam.png");
+            this.ImageListLarge.Images.SetKeyName(4, "_0023_MobileMe.png");
+            // 
+            // ImageListSmall
+            // 
+            this.ImageListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageListSmall.ImageStream")));
+            this.ImageListSmall.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageListSmall.Images.SetKeyName(0, "aimp.ico");
+            // 
+            // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 336);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.listView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(800, 345);
+            this.Controls.Add(this.LbDicAct);
+            this.Controls.Add(this.BtnAtras);
+            this.Controls.Add(this.GBox1);
+            this.Controls.Add(this.LisVMenu);
+            this.Name = "Menu1";
+            this.Text = "LISTVIEW";
+            this.GBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.ImageList imageList2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox GBox1;
+        private System.Windows.Forms.RadioButton RBtnTitulo;
+        private System.Windows.Forms.RadioButton RBtnDetalle;
+        private System.Windows.Forms.RadioButton RBtnLista;
+        private System.Windows.Forms.RadioButton RBtnSmall;
+        private System.Windows.Forms.RadioButton RBtnLargel;
+        private System.Windows.Forms.Button BtnAtras;
+        private System.Windows.Forms.Label LbDicAct;
+        private System.Windows.Forms.ListView LisVMenu;
+        private System.Windows.Forms.ImageList ImageListSmall;
+        private System.Windows.Forms.ImageList ImageListLarge;
     }
 }
 
