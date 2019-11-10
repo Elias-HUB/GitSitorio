@@ -1,0 +1,13 @@
+button {
+  margin-top: 10px;
+}
+
+.HV:hover {
+  box-shadow: 1px 8px 20px rgb(46, 140, 228);
+}
+
+.Margen {
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+}

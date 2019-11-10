@@ -1,0 +1,12 @@
+input:hover {
+  box-shadow: 1px 8px 20px rgb(46, 140, 228);
+}
+
+/* input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid rgb(46, 140, 228);
+  border-radius: 4px;
+} */
